@@ -1,14 +1,22 @@
-%main-backgr{
-    /*background-image: url(/assets/img/start-screen-gradient-background.png);
-    background: no-repeat;
-    background-position: top;*/
-    background: url(../assets/img/start-screen-gradient-background),
-    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), linear-gradient(0deg, #211f20, #211f20);
+body {
+    padding: 0;
+    margin: 0;
+}
+
+$font-georgia: Georgia, 'Times New Roman', Times, serif;
+
+$font-arial: Arial, Helvetica, sans-serif;
+
+%main-backgr {
+    background-color: rgb(87, 29, 2);
+    padding: 0;
 }
 
 %flex {
     display: flex;
 }
+
+$btn-radius: 100px;
 
 %space-between {
     justify-content:  space-between;
@@ -22,8 +30,17 @@ $color-primary: #F1CDB3;
     flex-direction: column;
 }
 
-.header, main {
-    margin: 60px 40px;
+a {
+    text-decoration: none;
+}
+
+.header {
+    padding: 60px 40px;
+}
+
+main {
+    margin: 60px 40px 0 60px;
+    align-items: center;
 }
 
 .header, nav, main {
@@ -39,35 +56,70 @@ $color-primary: #F1CDB3;
     color: $color-primary;
 }
 
-main {
-    align-items: center;
-}
-
 
 .main-txt {
     width: 460px;
     height: 322px;
+     
+    .btn{
+        width: 207px;
+        height: 52px;
+    }
     
 }
 
 .wrapper {
     @extend %main-backgr;
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
+    
     height: 908px;
 }
 
 .white-txt {
     color: white;
+        a {
+            font-family: $font-arial;
+        }
 }
 
 .btn {
     background-color: $color-primary;
+    border-radius: $btn-radius;
+    font-family: $font-georgia;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        color: black;
+    }
+
 }
+
+.title {
+    font-family: $font-georgia;
+}
+
+.text {
+    font-family: $font-arial;
+}
+
 .main-img {
     width: 698px;
     height: 728px;
+}
+
+.about {
+    @extend %flex;
+    @extend %space-between;
+    height: 588px;
+    align-items: center;
+    padding: 80px 215px 100px 215px;
+
+}
+
+.about-txt {
+    @include flexColumn();
+    @extend %space-between;
+    width: 380px;
 }

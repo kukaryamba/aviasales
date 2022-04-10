@@ -1,25 +1,38 @@
-.wrapper {
-  /*background-image: url(/assets/img/start-screen-gradient-background.png);
-    background: no-repeat;
-    background-position: top;*/
-  background: url(../assets/img/start-screen-gradient-background), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), -webkit-gradient(linear, left bottom, left top, from(#211f20), to(#211f20));
-  background: url(../assets/img/start-screen-gradient-background), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), linear-gradient(0deg, #211f20, #211f20);
+body {
+  padding: 0;
+  margin: 0;
 }
 
-.header, nav, main, .logo, .main-txt {
+.wrapper {
+  background-color: #571d02;
+  padding: 0;
+}
+
+.header, nav, main, .logo, .main-txt, .about, .about-txt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.header, nav, main {
+.header, nav, main, .about, .about-txt {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.header, main {
-  margin: 60px 40px;
+a {
+  text-decoration: none;
+}
+
+.header {
+  padding: 60px 40px;
+}
+
+main {
+  margin: 60px 40px 0 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logo, .main-txt {
@@ -33,23 +46,17 @@
   color: #F1CDB3;
 }
 
-main {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .main-txt {
   width: 460px;
   height: 322px;
 }
 
+.main-txt .btn {
+  width: 207px;
+  height: 52px;
+}
+
 .wrapper {
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
   height: 908px;
 }
 
@@ -57,12 +64,59 @@ main {
   color: white;
 }
 
+.white-txt a {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .btn {
   background-color: #F1CDB3;
+  border-radius: 100px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn a {
+  color: black;
+}
+
+.title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.text {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .main-img {
   width: 698px;
   height: 728px;
+}
+
+.about {
+  height: 588px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 80px 215px 100px 215px;
+}
+
+.about-txt {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 380px;
 }
 /*# sourceMappingURL=style.css.map */
