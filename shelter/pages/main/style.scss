@@ -1,0 +1,73 @@
+%main-backgr{
+    /*background-image: url(/assets/img/start-screen-gradient-background.png);
+    background: no-repeat;
+    background-position: top;*/
+    background: url(../assets/img/start-screen-gradient-background),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), linear-gradient(0deg, #211f20, #211f20);
+}
+
+%flex {
+    display: flex;
+}
+
+%space-between {
+    justify-content:  space-between;
+}
+
+$color-primary: #F1CDB3;
+
+
+@mixin flexColumn {
+    @extend %flex;
+    flex-direction: column;
+}
+
+.header, main {
+    margin: 60px 40px;
+}
+
+.header, nav, main {
+    @extend %flex;
+    @extend %space-between;
+}
+
+.logo, .main-txt {
+    @include flexColumn()
+}
+
+.logo {
+    color: $color-primary;
+}
+
+main {
+    align-items: center;
+}
+
+
+.main-txt {
+    width: 460px;
+    height: 322px;
+    
+}
+
+.wrapper {
+    @extend %main-backgr;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    height: 908px;
+}
+
+.white-txt {
+    color: white;
+}
+
+.btn {
+    background-color: $color-primary;
+}
+.main-img {
+    width: 698px;
+    height: 728px;
+}
