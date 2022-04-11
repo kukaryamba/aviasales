@@ -1,14 +1,15 @@
 body {
     padding: 0;
     margin: 0;
+    width: 1280px;
 }
 
 $font-georgia: Georgia, 'Times New Roman', Times, serif;
 
 $font-arial: Arial, Helvetica, sans-serif;
 
-%main-backgr {
-    background-color: rgb(87, 29, 2);
+%main-background {
+    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
     padding: 0;
 }
 
@@ -53,12 +54,12 @@ main {
     align-items: center;
 }
 
-.header, nav, main, .cards, .pet-cards, .pet-slides {
+.header, nav, main, .cards, .pet-cards, .pet-slides, .donation, footer {
     @extend %flex;
     @extend %space-between;
 }
 
-.logo, .main-txt, .pet-cards, .pet-slide {
+.logo, .main-txt, .pet-cards, .pet-slide, .help-block, .footer-info {
     @include flexColumn()
 }
 
@@ -80,7 +81,7 @@ main {
 }
 
 .wrapper {
-    @extend %main-backgr;
+    @extend %main-background;
     
     height: 908px;
 }
@@ -90,6 +91,10 @@ main {
         a {
             font-family: $font-arial;
         }
+}
+
+.block {
+    padding: 80px 40px 100px;
 }
 
 .btn {
@@ -115,10 +120,18 @@ main {
 .title {
     font-family: $font-georgia;
     color: $title-color;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
 }
 
 .text {
     font-family: $font-arial;
+}
+
+p {
+    margin: 0;
 }
 
 .main-img {
@@ -173,8 +186,95 @@ main {
 
 .slider-arrow-left {
     margin-right: 53px;
+     &:hover {
+         cursor: pointer;
+         
+     }
 }
 
 .slider-arrow-right {
     margin-left: 53px;
 }
+
+.help-block {
+    align-items: center;
+    h2 {
+        text-align: center;
+    }
+}
+
+.help-items {
+    @extend %flex;
+    /* height: 281px; */
+    flex-wrap: wrap;
+    column-gap: 120px;
+    row-gap: 55px;
+    justify-content: center;
+
+        img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 30px;
+        }
+
+        
+}
+
+.help-item {
+    @include flexColumn();
+    align-items: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+}
+
+.donation {
+    @extend %flex;
+    @extend %space-between;
+    width: 1280px;
+    align-items: center;
+    background-color: $dark-blocks-bckgr;
+
+}
+
+.donation-text {
+    @include flexColumn();
+    @extend %space-between;
+    height: 282px;
+    /* padding: 80px 182px 100px 183px; */
+    .btn {
+        @extend %flex;
+        justify-content: center;
+        width: 349px;
+        height: 43px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%;
+    }
+
+    img {
+        width: 30px;
+        height: 23px;
+    }
+
+    .some-text {
+        color: #B2B2B2;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+footer {
+    @extend %main-background;
+}
+
+.contacts {
+    color: $color-primary;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+}
+
