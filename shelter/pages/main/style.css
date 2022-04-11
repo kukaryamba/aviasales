@@ -1,7 +1,14 @@
-body {
-  padding: 0;
-  margin: 0;
-  width: 1280px;
+@charset "UTF-8";
+/* body {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+   
+} */
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .wrapper, footer {
@@ -9,13 +16,13 @@ body {
   padding: 0;
 }
 
-.header, nav, main, .cards, .pet-cards, .pet-slides, .donation, footer, .logo, .main-txt, .pet-slide, .help-block, .footer-info, .about, .about-txt, .help-items, .help-item, .donation-text, .donation-text .btn {
+.header, nav, main, .pet-slides, .donation, footer, .logo, .main-txt, .pet-cards, .pet-slide, .help-block, .footer-info, .about, .about-txt, .help-items, .help-item, .donation-text, .donation-text .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.header, nav, main, .cards, .pet-cards, .pet-slides, .donation, footer, .about, .about-txt, .donation-text {
+.header, nav, main, .pet-slides, .donation, footer, .donation-text {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -25,10 +32,22 @@ body {
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #545454;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
 }
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .header {
@@ -36,10 +55,12 @@ a {
 }
 
 main {
-  margin: 60px 40px 0 60px;
+  margin: 0 40px 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-column-gap: 42px;
+          column-gap: 42px;
 }
 
 .logo, .main-txt, .pet-cards, .pet-slide, .help-block, .footer-info {
@@ -49,13 +70,57 @@ main {
           flex-direction: column;
 }
 
-.logo {
+logo {
+  row-gap: 10px;
+}
+
+.logo-title {
   color: #F1CDB3;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 0.06em;
+}
+
+.logo-subtitle {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
+.active {
+  position: relative;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  background: #F1CDB3;
+  left: 0;
+  /* Положение линии слева */
+  bottom: -5px;
+  /* Положение линии */
+  width: 100%;
+  /* Линия на ширину текста */
+  height: 3px;
 }
 
 .main-txt {
-  width: 460px;
-  height: 322px;
+  /* width: 460px;
+    height: 322px; */
+  row-gap: 42px;
+}
+
+.main-txt h1 {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
 }
 
 .main-txt .btn {
@@ -75,8 +140,37 @@ main {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.block {
-  padding: 80px 40px 100px;
+/* .block {
+    padding: 80px 40px 100px;
+} */
+.pet-name {
+  color: #545454;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+nav {
+  font-family: 'Arial';
+  font-style: normal;
+  -webkit-column-gap: 35px;
+          column-gap: 35px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #CDCDCD;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav a {
+  color: #CDCDCD;
+}
+
+nav a:hover {
+  font-weight: 600;
 }
 
 .btn {
@@ -102,25 +196,34 @@ main {
   color: black;
 }
 
+.btn:hover {
+  background-color: #edbf9d;
+}
+
 .btn-white {
   background-color: white;
   border: 1px solid #F1CDB3;
 }
 
-.title {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #545454;
+.btn-txt {
+  font-family: 'Georgia';
+  font-style: normal;
   font-weight: 400;
-  font-size: 35px;
+  font-size: 17px;
   line-height: 130%;
   letter-spacing: 0.06em;
+  color: #292929;
 }
 
+/* .btn:hover {
+    background-color: ;
+}
+ */
 .text {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-p {
+p, h2 {
   margin: 0;
 }
 
@@ -130,11 +233,14 @@ p {
 }
 
 .about {
+  /* @extend %space-between; */
+  -webkit-column-gap: 120px;
+          column-gap: 120px;
   height: 588px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 80px 215px 100px 215px;
+  padding: 0 215px;
 }
 
 .about-txt {
@@ -142,21 +248,31 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 380px;
+  row-gap: 25px;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #4C4C4C;
 }
 
 .cards {
   width: 1100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .pet-cards {
+  row-gap: 60px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 877px;
+  /* height: 877px; */
   background-color: #F6F6F6;
   padding: 80px 40px;
 }
@@ -175,14 +291,12 @@ p {
 }
 
 .pet-slide {
-  height: 435px;
+  /* height: 435px; */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: white;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  /* justify-content: space-evenly; */
 }
 
 .slider-arrow-left {
@@ -198,9 +312,12 @@ p {
 }
 
 .help-block {
+  width: 1200px;
+  padding: 80px 127px 100px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  row-gap: 60px;
 }
 
 .help-block h2 {
@@ -208,6 +325,7 @@ p {
 }
 
 .help-items {
+  width: 80%;
   /* height: 281px; */
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -239,11 +357,14 @@ p {
 }
 
 .donation {
-  width: 1280px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #F6F6F6;
+  padding: 80px 182px 100px 183px;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  width: 1200px;
 }
 
 .donation-text {
@@ -252,7 +373,7 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 282px;
-  /* padding: 80px 182px 100px 183px; */
+  max-width: 282px;
 }
 
 .donation-text .btn {
@@ -277,6 +398,21 @@ p {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
+}
+
+footer {
+  height: 350px;
+  padding: 40px 40px 0;
+}
+
+/* .footer-img {
+    width: 300px;
+    height: 310px;
+} */
+.footer-info {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 40px;
 }
 
 .contacts {

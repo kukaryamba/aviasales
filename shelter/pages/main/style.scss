@@ -1,8 +1,14 @@
-body {
-    padding: 0;
-    margin: 0;
-    width: 1280px;
-}
+/* body {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+   
+} */
+   .container {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+      }
 
 $font-georgia: Georgia, 'Times New Roman', Times, serif;
 
@@ -18,7 +24,6 @@ $dark-blocks-bckgr: #F6F6F6;
 %flex {
     display: flex;
 }
-
 
 $btn-radius: 100px;
 
@@ -39,10 +44,23 @@ $title-color: #545454;
     font-weight: 400;
     font-size: 35px;
     line-height: 130%;
+    letter-spacing: 0.06em;
+    color: $title-color;
 }
+
+.title {
+    font-family: $font-georgia;
+    color: $title-color;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+}
+
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .header {
@@ -50,11 +68,12 @@ a {
 }
 
 main {
-    margin: 60px 40px 0 60px;
+    margin: 0 40px 0;
     align-items: center;
+    column-gap: 42px;
 }
 
-.header, nav, main, .cards, .pet-cards, .pet-slides, .donation, footer {
+.header, nav, main, .pet-slides, .donation, footer {
     @extend %flex;
     @extend %space-between;
 }
@@ -63,16 +82,58 @@ main {
     @include flexColumn()
 }
 
+logo {
+    row-gap: 10px;
+}
 
-.logo {
+.logo-title {
     color: $color-primary;
+    font-family: $font-georgia;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 0.06em;
+}
+
+.logo-subtitle {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.active {
+    position: relative;
+}
+
+.active::after {
+    content: '';
+    position: absolute;
+    background: $color-primary;
+    left: 0; /* Положение линии слева */
+    bottom: -5px; /* Положение линии */
+    width: 100%; /* Линия на ширину текста */
+    height: 3px; 
+    
 }
 
 
 .main-txt {
-    width: 460px;
-    height: 322px;
-     
+
+    /* width: 460px;
+    height: 322px; */
+    
+    row-gap: 42px;
+    h1 {
+        font-family: 'Georgia';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 44px;
+        line-height: 130%;
+    }
+
     .btn{
         width: 207px;
         height: 52px;
@@ -82,7 +143,6 @@ main {
 
 .wrapper {
     @extend %main-background;
-    
     height: 908px;
 }
 
@@ -93,8 +153,35 @@ main {
         }
 }
 
-.block {
+
+/* .block {
     padding: 80px 40px 100px;
+} */
+
+.pet-name{
+    color: $title-color;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+nav {
+    font-family: 'Arial';
+    font-style: normal;
+    column-gap: 35px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #CDCDCD;
+    align-items: center;
+        a {
+            color: #CDCDCD;
+        }
+        a:hover {
+            
+            font-weight: 600;
+        }
 }
 
 .btn {
@@ -110,6 +197,10 @@ main {
         color: black;
     }
 
+    &:hover {
+        background-color: darken($color-primary, 5%);
+    }
+
 }
 
 .btn-white {
@@ -117,22 +208,29 @@ main {
     border: 1px solid $color-primary;
 }
 
-.title {
-    font-family: $font-georgia;
-    color: $title-color;
+.btn-txt {
+    font-family: 'Georgia';
+    font-style: normal;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 17px;
     line-height: 130%;
     letter-spacing: 0.06em;
+    color: #292929;
 }
 
+/* .btn:hover {
+    background-color: ;
+}
+ */
 .text {
     font-family: $font-arial;
 }
 
-p {
+p, h2 {
     margin: 0;
 }
+
+
 
 .main-img {
     width: 698px;
@@ -141,27 +239,35 @@ p {
 
 .about {
     @extend %flex;
-    @extend %space-between;
+    /* @extend %space-between; */
+    column-gap: 120px;
     height: 588px;
     align-items: center;
-    padding: 80px 215px 100px 215px;
+    padding: 0 215px;
 
 }
 
 .about-txt {
     @include flexColumn();
-    @extend %space-between;
-    width: 380px;
+    row-gap: 25px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #4C4C4C;
 }
 
 .cards {
     width: 1100px;
+    display: flex;
     align-items: center;
 }
 
 .pet-cards {
+    row-gap: 60px;
     align-items: center;
-    height: 877px;
+    /* height: 877px; */
     background-color: $dark-blocks-bckgr;
     padding: 80px 40px;
         .btn {
@@ -178,10 +284,10 @@ p {
 }
 
 .pet-slide {
-    height: 435px;
+    /* height: 435px; */
     align-items: center;
     background-color: white;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
 }
 
 .slider-arrow-left {
@@ -197,7 +303,10 @@ p {
 }
 
 .help-block {
+    width: 1200px;
+    padding: 80px 127px 100px;
     align-items: center;
+    row-gap: 60px;
     h2 {
         text-align: center;
     }
@@ -205,6 +314,7 @@ p {
 
 .help-items {
     @extend %flex;
+    width: 80%;
     /* height: 281px; */
     flex-wrap: wrap;
     column-gap: 120px;
@@ -231,9 +341,11 @@ p {
 .donation {
     @extend %flex;
     @extend %space-between;
-    width: 1280px;
     align-items: center;
     background-color: $dark-blocks-bckgr;
+    padding: 80px 182px 100px 183px;
+    column-gap: 30px;
+    width: 1200px;
 
 }
 
@@ -241,7 +353,7 @@ p {
     @include flexColumn();
     @extend %space-between;
     height: 282px;
-    /* padding: 80px 182px 100px 183px; */
+    max-width: 282px;
     .btn {
         @extend %flex;
         justify-content: center;
@@ -263,13 +375,26 @@ p {
         font-weight: 400;
         font-size: 12px;
         line-height: 18px;
+        
     }
 }
 
 footer {
     @extend %main-background;
+    @extend %space-between;
+    height: 350px;
+    padding: 40px 40px 0;
 }
 
+/* .footer-img {
+    width: 300px;
+    height: 310px;
+} */
+
+.footer-info {
+   justify-content: space-around;
+   padding-bottom: 40px;
+}
 .contacts {
     color: $color-primary;
     font-weight: 400;
