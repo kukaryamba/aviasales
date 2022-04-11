@@ -286,7 +286,11 @@ p, h2 {
 .pet-slide {
     /* height: 435px; */
     align-items: center;
-    background-color: white;
+    background-color: #fafafa;
+    &:hover {
+        background-color: white;
+        cursor: pointer;
+    }
     /* justify-content: space-evenly; */
 }
 
@@ -345,13 +349,14 @@ p, h2 {
     background-color: $dark-blocks-bckgr;
     padding: 80px 182px 100px 183px;
     column-gap: 30px;
-    width: 1200px;
+    
 
 }
 
 .donation-text {
     @include flexColumn();
     @extend %space-between;
+    row-gap: 20px;
     height: 282px;
     max-width: 282px;
     .btn {
@@ -392,7 +397,8 @@ footer {
 } */
 
 .footer-info {
-   justify-content: space-around;
+    align-items: flex-start;
+   justify-content: space-between;
    padding-bottom: 40px;
 }
 .contacts {
