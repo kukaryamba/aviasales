@@ -12,22 +12,32 @@ $font-arial: Arial, Helvetica, sans-serif;
     padding: 0;
 }
 
+$dark-blocks-bckgr: #F6F6F6;
+
 %flex {
     display: flex;
 }
 
+
 $btn-radius: 100px;
 
 %space-between {
-    justify-content:  space-between;
+    justify-content: space-between;
 }
 
 $color-primary: #F1CDB3;
 
+$title-color: #545454;
 
 @mixin flexColumn {
     @extend %flex;
     flex-direction: column;
+}
+
+.block-name {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
 }
 
 a {
@@ -43,14 +53,15 @@ main {
     align-items: center;
 }
 
-.header, nav, main {
+.header, nav, main, .cards, .pet-cards, .pet-slides {
     @extend %flex;
     @extend %space-between;
 }
 
-.logo, .main-txt {
+.logo, .main-txt, .pet-cards, .pet-slide {
     @include flexColumn()
 }
+
 
 .logo {
     color: $color-primary;
@@ -96,8 +107,14 @@ main {
 
 }
 
+.btn-white {
+    background-color: white;
+    border: 1px solid $color-primary;
+}
+
 .title {
     font-family: $font-georgia;
+    color: $title-color;
 }
 
 .text {
@@ -122,4 +139,42 @@ main {
     @include flexColumn();
     @extend %space-between;
     width: 380px;
+}
+
+.cards {
+    width: 1100px;
+    align-items: center;
+}
+
+.pet-cards {
+    align-items: center;
+    height: 877px;
+    background-color: $dark-blocks-bckgr;
+    padding: 80px 40px;
+        .btn {
+            width: 261px;
+            height: 52px;
+        }
+        .title {
+            text-align: center;
+        }
+}
+
+.pet-slides {
+    width: 1200px;
+}
+
+.pet-slide {
+    height: 435px;
+    align-items: center;
+    background-color: white;
+    justify-content: space-evenly;
+}
+
+.slider-arrow-left {
+    margin-right: 53px;
+}
+
+.slider-arrow-right {
+    margin-left: 53px;
 }
