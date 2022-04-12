@@ -1,9 +1,6 @@
-/* body {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-   
-} */
+ body {
+    margin: 0;
+} 
    .container {
         max-width: 1280px;
         width: 100%;
@@ -304,24 +301,25 @@ p, h2 {
 }
 
 .help-block {
-    width: 1200px;
-    padding: 80px 127px 100px;
+    /* width: 1200px; */
+    padding: 20px 0 100px 0;
     align-items: center;
     row-gap: 60px;
     h2 {
         text-align: center;
     }
+    
 }
 
 .help-items {
     @extend %flex;
-    width: 80%;
+    width: 90%;
     /* height: 281px; */
     flex-wrap: wrap;
     column-gap: 120px;
     row-gap: 55px;
     justify-content: center;
-
+    
         img {
             width: 60px;
             height: 60px;
@@ -333,10 +331,12 @@ p, h2 {
 
 .help-item {
     @include flexColumn();
+    font-family: $font-georgia;
     align-items: center;
     font-weight: 400;
     font-size: 20px;
     line-height: 115%;
+    letter-spacing: 0.06em;
 }
 
 .donation {
