@@ -1,27 +1,21 @@
-/* body {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-   
-} */
 .container {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
 }
 
-.wrapper, .footer-content {
+.footer-content {
   background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
   padding: 0;
 }
 
-.header, nav, main, .pet-slides, .donation, .logo, .main-txt, .pet-cards, .pet-slide, .help-block, .footer-info, .about, .about-txt, .help-items, .help-item, .donation-text, .donation-text .btn {
+.logo, .main-txt, .pet-cards, .pet-slide, .help-block, .header, nav, main, .pet-slides, .donation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.header, nav, main, .pet-slides, .donation, .donation-text {
+.header, nav, main, .pet-slides, .donation {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -44,9 +38,21 @@
   letter-spacing: 0.06em;
 }
 
+.white-txt {
+  color: white;
+}
+
+.white-txt a {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
+}
+
+p {
+  margin: 0;
 }
 
 .header {
@@ -62,19 +68,11 @@ main {
           column-gap: 42px;
 }
 
-.logo, .main-txt, .pet-cards, .pet-slide, .help-block, .footer-info {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 logo {
-  row-gap: 10px;
+  color: #545454;
 }
 
 .logo-title {
-  color: #F1CDB3;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: 400;
@@ -88,7 +86,6 @@ logo {
   font-weight: 400;
   font-size: 13px;
   letter-spacing: 0.1em;
-  color: #FFFFFF;
 }
 
 .active {
@@ -105,66 +102,8 @@ logo {
   height: 3px;
 }
 
-.main-txt {
-  row-gap: 42px;
-}
-
-.main-txt h1 {
-  font-family: 'Georgia';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 44px;
-  line-height: 130%;
-}
-
-.main-txt .btn {
-  width: 207px;
-  height: 52px;
-}
-
-.wrapper {
-  height: 908px;
-}
-
-.white-txt {
-  color: white;
-}
-
-.white-txt a {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* .block {
-    padding: 80px 40px 100px;
-} */
-.pet-name {
-  color: #545454;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
-}
-
-nav {
-  font-family: 'Arial';
-  font-style: normal;
-  -webkit-column-gap: 35px;
-          column-gap: 35px;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 160%;
-  color: #CDCDCD;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-nav a {
-  color: #CDCDCD;
-}
-
-nav a:hover {
-  color: #edbf9d;
+.block {
+  padding: 80px 40px 100px;
 }
 
 .btn {
@@ -209,46 +148,32 @@ nav a:hover {
   color: #292929;
 }
 
-/* .btn:hover {
-    background-color: ;
-}
- */
-.text {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-p, h2 {
-  margin: 0;
-}
-
-.main-img {
-  width: 698px;
-  height: 728px;
-}
-
-.about {
-  /* @extend %space-between; */
-  -webkit-column-gap: 120px;
-          column-gap: 120px;
-  height: 588px;
+nav {
+  font-family: 'Arial';
+  font-style: normal;
+  -webkit-column-gap: 35px;
+          column-gap: 35px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 215px;
 }
 
-.about-txt {
+nav a {
+  color: #545454;
+}
+
+nav a:hover {
+  color: #edbf9d;
+}
+
+.logo, .main-txt, .pet-cards, .pet-slide, .help-block {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 25px;
-  font-family: 'Arial';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 160%;
-  color: #4C4C4C;
 }
 
 .cards {
@@ -290,7 +215,9 @@ p, h2 {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fafafa;
-  /* justify-content: space-evenly; */
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .pet-slide:hover {
@@ -310,102 +237,6 @@ p, h2 {
   margin-left: 53px;
 }
 
-.help-block {
-  width: 1200px;
-  padding: 80px 127px 100px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  row-gap: 60px;
-}
-
-.help-block h2 {
-  text-align: center;
-}
-
-.help-items {
-  width: 80%;
-  /* height: 281px; */
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-column-gap: 120px;
-          column-gap: 120px;
-  row-gap: 55px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.help-items img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 30px;
-}
-
-.help-item {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 115%;
-}
-
-.donation {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #F6F6F6;
-  padding: 80px 182px 100px 183px;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
-}
-
-.donation-text {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 20px;
-  height: 282px;
-  max-width: 282px;
-}
-
-.donation-text .btn {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 349px;
-  height: 43px;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 115%;
-}
-
-.donation-text img {
-  width: 30px;
-  height: 23px;
-}
-
-.donation-text .some-text {
-  color: #B2B2B2;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-}
-
-.footer-img {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  margin-top: 40px;
-}
-
 .footer-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -420,6 +251,13 @@ p, h2 {
 
 .footer-info .block-name {
   color: white;
+}
+
+.footer-img {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 40px;
 }
 
 .contacts {
@@ -449,4 +287,4 @@ p, h2 {
           column-gap: 160px;
   padding: 0 40px 0;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=pets.css.map */

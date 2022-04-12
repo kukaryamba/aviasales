@@ -1,0 +1,272 @@
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  $font-georgia: Georgia, 'Times New Roman', Times, serif;
+
+  $font-arial: Arial, Helvetica, sans-serif;
+  
+  %main-background {
+      background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+      padding: 0;
+  }
+  
+  $dark-blocks-bckgr: #F6F6F6;
+  
+  %flex {
+      display: flex;
+  }
+  
+  $btn-radius: 100px;
+  
+  %space-between {
+      justify-content: space-between;
+  }
+  
+  $color-primary: #F1CDB3;
+  
+  $title-color: #545454;
+  
+  @mixin flexColumn {
+      @extend %flex;
+      flex-direction: column;
+  }
+  
+  .block-name {
+      font-weight: 400;
+      font-size: 35px;
+      line-height: 130%;
+      letter-spacing: 0.06em;
+      color: $title-color;
+  }
+  
+  .title {
+      font-family: $font-georgia;
+      color: $title-color;
+      font-weight: 400;
+      font-size: 35px;
+      line-height: 130%;
+      letter-spacing: 0.06em;
+  }
+  
+  .white-txt {
+    color: white;
+        a {
+            font-family: $font-arial;
+        }
+}
+  a {
+      text-decoration: none;
+      cursor: pointer;
+  }
+  p {
+      margin: 0;
+  }
+  
+  .header {
+      padding: 60px 40px;
+  }
+  
+  main {
+      margin: 0 40px 0;
+      align-items: center;
+      column-gap: 42px;
+  }
+
+  logo {
+    color: #545454;
+  }
+
+  .logo-title {
+    font-family: $font-georgia;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 0.06em;
+}
+
+.logo-subtitle {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+}
+
+.active {
+    position: relative;
+}
+
+.active::after {
+    content: '';
+    position: absolute;
+    background: $color-primary;
+    left: 0; 
+    bottom: -5px; 
+    width: 100%; 
+    height: 3px; 
+    
+}
+
+.block {
+    padding: 80px 40px 100px;
+} 
+
+.btn {
+    background-color: $color-primary;
+    border-radius: $btn-radius;
+    font-family: $font-georgia;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        color: black;
+    }
+
+    &:hover {
+        background-color: darken($color-primary, 5%);
+    }
+
+}
+
+.btn-white {
+    background-color: white;
+    border: 1px solid $color-primary;
+}
+
+.btn-txt {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+}
+
+
+nav {
+    font-family: 'Arial';
+    font-style: normal;
+    column-gap: 35px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    align-items: center;
+        a {
+            color: #545454;
+        }
+        a:hover {
+            
+            color: darken($color-primary, 5%);
+
+        }
+}
+
+.logo, .main-txt, .pet-cards, .pet-slide, .help-block,  {
+    @include flexColumn()
+}
+
+.header, nav, main, .pet-slides, .donation {
+    @extend %flex;
+    @extend %space-between;
+}
+
+
+.cards {
+    width: 1100px;
+    display: flex;
+    align-items: center;
+}
+
+.pet-cards {
+    row-gap: 60px;
+    align-items: center;
+    /* height: 877px; */
+    background-color: $dark-blocks-bckgr;
+    padding: 80px 40px;
+        .btn {
+            width: 261px;
+            height: 52px;
+        }
+        .title {
+            text-align: center;
+        }
+}
+
+.pet-slides {
+    width: 1200px;
+}
+
+.pet-slide {
+    /* height: 435px; */
+    align-items: center;
+    background-color: #fafafa;
+    &:hover {
+        background-color: white;
+        cursor: pointer;
+    }
+     justify-content: space-evenly;
+}
+
+.slider-arrow-left {
+    margin-right: 53px;
+     &:hover {
+         cursor: pointer;
+         
+     }
+}
+
+.slider-arrow-right {
+    margin-left: 53px;
+}
+
+
+
+
+.pet-cards {
+    
+}
+
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+        .block-name {
+            color: white;
+        }
+        margin-top: 56px;
+}
+
+
+
+.footer-img {
+    align-items: flex-end;
+    margin-top: 40px;
+}
+
+.contacts {
+    color: $color-primary;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+
+.footer-content {
+    display: flex;
+    @extend %main-background;
+    align-items: flex-start;
+    column-gap: 160px;
+    padding: 0 40px 0;
+} 
