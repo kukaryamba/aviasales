@@ -185,16 +185,6 @@ nav a:hover {
           flex-direction: column;
 }
 
-.cards {
-  width: 1100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .pet-cards {
   row-gap: 60px;
   -webkit-box-align: center;
@@ -215,23 +205,40 @@ nav a:hover {
 }
 
 .pet-slides {
-  width: 1200px;
+  /* width: 1200px; */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 30px;
 }
 
 .pet-slide {
   /* height: 435px; */
+  row-gap: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #fafafa;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  padding-bottom: 20px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .pet-slide:hover {
   background-color: white;
   cursor: pointer;
+}
+
+.pet-slide .btn {
+  width: 187px;
+  height: 52px;
+}
+
+.pet-name {
+  color: #545454;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
 }
 
 .slider-arrow-left {

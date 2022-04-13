@@ -269,13 +269,13 @@ p, h2 {
   padding: 80px 40px;
 }
 
+.pet-cards .title {
+  text-align: center;
+}
+
 .pet-cards .btn {
   width: 261px;
   height: 52px;
-}
-
-.pet-cards .title {
-  text-align: center;
 }
 
 .pet-slides {
@@ -283,17 +283,24 @@ p, h2 {
 }
 
 .pet-slide {
-  /* height: 435px; */
+  height: 435px;
+  row-gap: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #fafafa;
-  /* justify-content: space-evenly; */
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .pet-slide:hover {
   background-color: white;
   cursor: pointer;
+}
+
+.pet-slide .btn {
+  width: 187px;
+  height: 52px;
 }
 
 .slider-arrow-left {

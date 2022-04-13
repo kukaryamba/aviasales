@@ -264,13 +264,14 @@ p, h2 {
     /* height: 877px; */
     background-color: $dark-blocks-bckgr;
     padding: 80px 40px;
-        .btn {
-            width: 261px;
-            height: 52px;
-        }
+       
         .title {
             text-align: center;
         }
+             .btn {
+                width: 261px;
+                height: 52px;
+             }
 }
 
 .pet-slides {
@@ -278,14 +279,19 @@ p, h2 {
 }
 
 .pet-slide {
-    /* height: 435px; */
+    height: 435px;
+    row-gap: 30px;
     align-items: center;
     background-color: #fafafa;
     &:hover {
         background-color: white;
         cursor: pointer;
     }
-    /* justify-content: space-evenly; */
+     justify-content: space-around;
+     .btn {
+        width: 187px;
+        height: 52px;
+    }
 }
 
 .slider-arrow-left {
