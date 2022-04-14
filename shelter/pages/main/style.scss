@@ -294,7 +294,7 @@ p, h2 {
     align-items: center;
     /* height: 877px; */
     background-color: $dark-blocks-bckgr;
-    padding: 80px 40px;
+    padding: 20px 40px 100px;
        
         .title {
             text-align: center;
@@ -310,9 +310,9 @@ p, h2 {
 }
 
 .pet-slide {
-    height: 435px;
     row-gap: 30px;
     align-items: center;
+    padding-bottom: 30px;
     background-color: #fafafa;
     &:hover {
         background-color: white;

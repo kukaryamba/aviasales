@@ -210,7 +210,7 @@ nav {
     align-items: center;
     /* height: 877px; */
     background-color: $dark-blocks-bckgr;
-    padding: 80px 40px;
+    padding: 60px 40px 100px;
         .btn-info {
             width: 261px;
             height: 52px;
@@ -227,11 +227,11 @@ nav {
 }
 
 .pet-slide {
-    /* height: 435px; */
+    
     row-gap: 30px;
     align-items: center;
     background-color: #fafafa;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     &:hover {
         background-color: white;
         cursor: pointer;
