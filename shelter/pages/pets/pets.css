@@ -2,6 +2,16 @@ body {
   margin: 0;
 }
 
+@font-face {
+  font-family: Arial;
+  src: url(./assets/fonts/Arial.ttf);
+}
+
+@font-face {
+  font-family: Georgia;
+  src: url(./assets/fonts/Georgia.ttf);
+}
+
 .container {
   max-width: 1280px;
   width: 100%;

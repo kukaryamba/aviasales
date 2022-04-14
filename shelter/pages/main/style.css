@@ -8,6 +8,16 @@ body {
   margin: 0 auto;
 }
 
+@font-face {
+  font-family: Arial;
+  src: url(./assets/fonts/Arial.ttf);
+}
+
+@font-face {
+  font-family: Georgia;
+  src: url(./assets/fonts/Georgia.ttf);
+}
+
 .wrapper, .footer-content {
   background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
   padding: 0;

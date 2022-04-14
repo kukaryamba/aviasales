@@ -7,6 +7,15 @@
         margin: 0 auto;
       }
 
+    @font-face {
+        font-family: Arial;
+        src: url(./assets/fonts/Arial.ttf);
+    }
+    @font-face {
+        font-family: Georgia;
+        src: url(./assets/fonts/Georgia.ttf);
+    } 
+      
 $font-georgia: Georgia, 'Times New Roman', Times, serif;
 
 $font-arial: Arial, Helvetica, sans-serif;
@@ -29,6 +38,8 @@ $dark-blocks-bckgr: #F6F6F6;
     }
     
 }
+
+
 
 $btn-radius: 100px;
 
