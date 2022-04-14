@@ -115,7 +115,7 @@ logo {
   padding: 80px 40px 100px;
 }
 
-.btn {
+.btn-info {
   background-color: #F1CDB3;
   border-radius: 100px;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -134,12 +134,14 @@ logo {
           justify-content: center;
 }
 
-.btn a {
+.btn-info a {
   color: black;
 }
 
 .btn:hover {
-  background-color: #edbf9d;
+  background-color: #FDDCC4;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .btn-white {
@@ -195,7 +197,7 @@ nav a:hover {
   padding: 80px 40px;
 }
 
-.pet-cards .btn {
+.pet-cards .btn-info {
   width: 261px;
   height: 52px;
 }
@@ -228,7 +230,7 @@ nav a:hover {
   cursor: pointer;
 }
 
-.pet-slide .btn {
+.pet-slide .btn-info {
   width: 187px;
   height: 52px;
 }
@@ -251,6 +253,51 @@ nav a:hover {
 
 .slider-arrow-right {
   margin-left: 53px;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.paginator {
+  /*     box-sizing: border-box;*/
+  border-radius: 100px;
+  height: 52px;
+  width: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+}
+
+.btn-num {
+  background: #F1CDB3;
+  border: none;
+}
+
+.btn-active {
+  border: 2px solid #F1CDB3;
+}
+
+.btn-passive {
+  border: 2px solid #CDCDCD;
 }
 
 .footer-info {

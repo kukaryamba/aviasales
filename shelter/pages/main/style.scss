@@ -152,13 +152,6 @@ logo {
     padding: 80px 40px 100px;
 } */
 
-.pet-name{
-    color: $title-color;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-}
 
 nav {
     font-family: 'Arial';
@@ -172,13 +165,16 @@ nav {
         a {
             color: #CDCDCD;
         }
-        a:hover {
-            
-            color: darken($color-primary, 5%);
-        }
+        
 }
 
-.btn {
+.btn:hover {
+    background-color:#FDDCC4;
+    transition: 0.5s;
+}
+
+
+.btn-info {
     background-color: $color-primary;
     border-radius: $btn-radius;
     font-family: $font-georgia;
@@ -190,11 +186,6 @@ nav {
     a {
         color: black;
     }
-
-    &:hover {
-        background-color: darken($color-primary, 5%);
-    }
-
 }
 
 .btn-white {
@@ -212,10 +203,7 @@ nav {
     color: #292929;
 }
 
-/* .btn:hover {
-    background-color: ;
-}
- */
+
 .text {
     font-family: $font-arial;
 }
@@ -292,6 +280,14 @@ p, h2 {
         width: 187px;
         height: 52px;
     }
+}
+
+.pet-name{
+    color: $title-color;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
 }
 
 .slider-arrow-left {
@@ -419,5 +415,5 @@ p, h2 {
     @extend %main-background;
     align-items: flex-start;
     column-gap: 160px;
-    padding: 0 40px 0;
+    padding: 10px 40px 0;
 } 

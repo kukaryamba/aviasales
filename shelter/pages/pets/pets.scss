@@ -124,7 +124,7 @@ body {
     padding: 80px 40px 100px;
 } 
 
-.btn {
+.btn-info {
     background-color: $color-primary;
     border-radius: $btn-radius;
     font-family: $font-georgia;
@@ -137,10 +137,13 @@ body {
         color: black;
     }
 
-    &:hover {
-        background-color: darken($color-primary, 5%);
-    }
+   
 
+}
+
+.btn:hover {
+    background-color:#FDDCC4;
+    transition: 0.5s;
 }
 
 .btn-white {
@@ -193,7 +196,7 @@ nav {
     /* height: 877px; */
     background-color: $dark-blocks-bckgr;
     padding: 80px 40px;
-        .btn {
+        .btn-info {
             width: 261px;
             height: 52px;
         }
@@ -219,7 +222,7 @@ nav {
         cursor: pointer;
     }
      justify-content: space-around;
-     .btn {
+     .btn-info {
         width: 187px;
         height: 52px;
     }
@@ -250,6 +253,40 @@ nav {
 
 .pet-cards {
     
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.paginator {
+/*     box-sizing: border-box;*/
+    border-radius: 100px;
+    height: 52px;
+    width: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+     
+}
+.btn-num {
+    background: $color-primary;
+    border: none;
+}
+
+.btn-active {
+    border: 2px solid $color-primary;
+}
+
+.btn-passive {
+    border: 2px solid #CDCDCD;
 }
 
 

@@ -135,14 +135,6 @@ logo {
 /* .block {
     padding: 80px 40px 100px;
 } */
-.pet-name {
-  color: #545454;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
-}
-
 nav {
   font-family: 'Arial';
   font-style: normal;
@@ -161,11 +153,13 @@ nav a {
   color: #CDCDCD;
 }
 
-nav a:hover {
-  color: #edbf9d;
+.btn:hover {
+  background-color: #FDDCC4;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.btn {
+.btn-info {
   background-color: #F1CDB3;
   border-radius: 100px;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -184,12 +178,8 @@ nav a:hover {
           justify-content: center;
 }
 
-.btn a {
+.btn-info a {
   color: black;
-}
-
-.btn:hover {
-  background-color: #edbf9d;
 }
 
 .btn-white {
@@ -207,10 +197,6 @@ nav a:hover {
   color: #292929;
 }
 
-/* .btn:hover {
-    background-color: ;
-}
- */
 .text {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -301,6 +287,14 @@ p, h2 {
 .pet-slide .btn {
   width: 187px;
   height: 52px;
+}
+
+.pet-name {
+  color: #545454;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
 }
 
 .slider-arrow-left {
@@ -454,6 +448,6 @@ p, h2 {
           align-items: flex-start;
   -webkit-column-gap: 160px;
           column-gap: 160px;
-  padding: 0 40px 0;
+  padding: 10px 40px 0;
 }
 /*# sourceMappingURL=style.css.map */
