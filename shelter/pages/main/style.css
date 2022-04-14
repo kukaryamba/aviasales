@@ -23,7 +23,7 @@ body {
   padding: 0;
 }
 
-.header, nav, main, .pet-slides, .donation, .logo, .main-txt, .pet-cards, .pet-slide, .help-block, .footer-info, .about, .about-txt, .help-items, .help-item, .donation-text, .donation-text .btn {
+.header, nav, main, .pet-slides, .donation, .logo, .main-txt, .pet-cards, .pet-slide, .help-block, .footer-info, .about, .about-txt, .help-items, .help-item, .donation-text, .donation-text .btn-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -425,19 +425,22 @@ p, h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 20px;
-  height: 282px;
-  max-width: 282px;
+  /* height: 282px; */
+  /* max-width: 282px; */
 }
 
-.donation-text .btn {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.donation-text .btn-info {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
   width: 349px;
   height: 43px;
+  border-radius: 9px;
   font-weight: 400;
   font-size: 20px;
   line-height: 115%;
+  letter-spacing: 0.06em;
 }
 
 .donation-text img {

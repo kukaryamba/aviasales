@@ -406,16 +406,19 @@ p, h2 {
     @include flexColumn();
     @extend %space-between;
     row-gap: 20px;
-    height: 282px;
-    max-width: 282px;
-    .btn {
+    /* height: 282px; */
+    /* max-width: 282px; */
+    .btn-info {
         @extend %flex;
-        justify-content: center;
+        justify-content: space-around;
+        column-gap: 15px;
         width: 349px;
         height: 43px;
+        border-radius: 9px;
         font-weight: 400;
         font-size: 20px;
         line-height: 115%;
+        letter-spacing: 0.06em;
     }
 
     img {
@@ -432,6 +435,7 @@ p, h2 {
         
     }
 }
+
 
 .footer-img {
     align-items: flex-end;
