@@ -107,6 +107,7 @@ body {
 
 .active {
     position: relative;
+    color: #292929;
 }
 
 .active::after {
@@ -182,9 +183,7 @@ nav {
             color: #545454;
         }
         a:hover {
-            
-            color: darken($color-primary, 5%);
-
+            color: #292929;
         }
 }
 

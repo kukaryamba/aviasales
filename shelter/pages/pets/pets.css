@@ -99,6 +99,7 @@ logo {
 
 .active {
   position: relative;
+  color: #292929;
 }
 
 .active::after {
@@ -183,7 +184,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #edbf9d;
+  color: #292929;
 }
 
 .logo, .main-txt, .pet-cards, .pet-slide, .help-block {

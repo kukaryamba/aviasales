@@ -97,6 +97,7 @@ logo {
 
 .active {
   position: relative;
+  color: #FAFAFA;
 }
 
 .active::after {
@@ -157,6 +158,10 @@ nav {
 
 nav a {
   color: #CDCDCD;
+}
+
+nav a:hover {
+  color: #FAFAFA;
 }
 
 .btn:hover {
@@ -454,6 +459,6 @@ p, h2 {
           align-items: flex-start;
   -webkit-column-gap: 160px;
           column-gap: 160px;
-  padding: 10px 40px 0;
+  padding: 0 40px 0;
 }
 /*# sourceMappingURL=style.css.map */
