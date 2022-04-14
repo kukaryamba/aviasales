@@ -1,21 +1,16 @@
  body {
     margin: 0;
 } 
-   .container {
-        max-width: 1280px;
-        width: 100%;
-        margin: 0 auto;
-      }
 
-    @font-face {
-        font-family: Arial;
-        src: url(./assets/fonts/Arial.ttf);
-    }
-    @font-face {
-        font-family: Georgia;
-        src: url(./assets/fonts/Georgia.ttf);
-    } 
-      
+@import url(../../assets/fonts/georgia/stylesheet.css);
+@import url(../../assets/fonts/arial/stylesheet.css);
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
 $font-georgia: Georgia, 'Times New Roman', Times, serif;
 
 $font-arial: Arial, Helvetica, sans-serif;

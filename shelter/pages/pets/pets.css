@@ -1,15 +1,7 @@
+@import url(../../assets/fonts/georgia/stylesheet.css);
+@import url(../../assets/fonts/arial/stylesheet.css);
 body {
   margin: 0;
-}
-
-@font-face {
-  font-family: Arial;
-  src: url(./assets/fonts/Arial.ttf);
-}
-
-@font-face {
-  font-family: Georgia;
-  src: url(./assets/fonts/Georgia.ttf);
 }
 
 .container {
