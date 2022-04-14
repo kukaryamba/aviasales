@@ -68,10 +68,9 @@ a {
 }
 
 main {
-  margin: 0 40px 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  /* align-items: center; */
   -webkit-column-gap: 42px;
           column-gap: 42px;
 }
@@ -121,6 +120,7 @@ logo {
 }
 
 .main-txt {
+  margin-top: 160px;
   row-gap: 42px;
 }
 
@@ -130,11 +130,21 @@ logo {
   font-weight: 400;
   font-size: 44px;
   line-height: 130%;
+  margin: 0;
 }
 
 .main-txt .btn {
   width: 207px;
   height: 52px;
+}
+
+.main-description {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #CDCDCD;
 }
 
 .wrapper {
@@ -229,17 +239,23 @@ p, h2 {
 .main-img {
   width: 698px;
   height: 728px;
+  /* margin-top: 120px; */
 }
 
 .about {
   /* @extend %space-between; */
   -webkit-column-gap: 120px;
           column-gap: 120px;
-  height: 588px;
+  /* height: 588px; */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 0 215px;
+  margin: 80px 0 100px;
+}
+
+.about h2 {
+  margin: 0;
 }
 
 .about-txt {
