@@ -19,6 +19,12 @@ body {
   display: flex;
 }
 
+.pet-slide:hover .btn {
+  background-color: #FDDCC4;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .header, nav, main, .pet-slides, .donation, .donation-text {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;

@@ -141,6 +141,14 @@ body {
 
 }
 
+%card-hover {
+    .btn {
+        background-color:#FDDCC4;
+        transition: 0.5s;
+    }
+    
+}
+
 .btn:hover {
     background-color:#FDDCC4;
     transition: 0.5s;
@@ -220,6 +228,7 @@ nav {
     &:hover {
         background-color: white;
         cursor: pointer;
+        @extend %card-hover;
     }
      justify-content: space-around;
      .btn-info {

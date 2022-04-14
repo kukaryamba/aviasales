@@ -22,6 +22,14 @@ $dark-blocks-bckgr: #F6F6F6;
     display: flex;
 }
 
+%card-hover {
+    .btn {
+        background-color:#FDDCC4;
+        transition: 0.5s;
+    }
+    
+}
+
 $btn-radius: 100px;
 
 %space-between {
@@ -274,6 +282,7 @@ p, h2 {
     &:hover {
         background-color: white;
         cursor: pointer;
+        @extend %card-hover;
     }
      justify-content: space-around;
      .btn {

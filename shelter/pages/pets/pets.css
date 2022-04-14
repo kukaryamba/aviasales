@@ -138,6 +138,12 @@ logo {
   color: black;
 }
 
+.pet-slide:hover .btn {
+  background-color: #FDDCC4;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .btn:hover {
   background-color: #FDDCC4;
   -webkit-transition: 0.5s;
