@@ -21,7 +21,7 @@ $font-georgia: Georgia, 'Times New Roman', Times, serif;
 $font-arial: Arial, Helvetica, sans-serif;
 
 %main-background {
-    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+    background: url(../../assets/img/start-screen-gradient-background.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
     padding: 0;
 }
 
