@@ -247,13 +247,16 @@ p, h2 {
 }
 
 .cards {
-  width: 1100px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .pet-cards {
@@ -270,13 +273,14 @@ p, h2 {
   text-align: center;
 }
 
-.pet-cards .btn {
+.pet-cards .btn-info {
   width: 261px;
   height: 52px;
 }
 
 .pet-slides {
-  width: 1200px;
+  -webkit-column-gap: 90px;
+          column-gap: 90px;
 }
 
 .pet-slide {
@@ -295,7 +299,7 @@ p, h2 {
   cursor: pointer;
 }
 
-.pet-slide .btn {
+.pet-slide .btn-info {
   width: 187px;
   height: 52px;
 }
@@ -308,18 +312,46 @@ p, h2 {
   line-height: 23px;
 }
 
-.slider-arrow-left {
-  margin-right: 53px;
+.paginator {
+  /* box-sizing: border-box; */
+  border-radius: 100px;
+  height: 52px;
+  width: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* font-family: 'Georgia';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%; */
 }
 
-.slider-arrow-left:hover {
-  cursor: pointer;
+.paginator img {
+  margin: 0;
+}
+
+.btn-active {
+  border: 2px solid #F1CDB3;
+}
+
+/* .slider-arrow-left {
+    margin-right: 53px;
+     &:hover {
+         cursor: pointer;
+         
+     }
 }
 
 .slider-arrow-right {
-  margin-left: 53px;
-}
-
+    margin-left: 53px;
+} */
 .help-block {
   /* width: 1200px; */
   padding: 20px 0 100px 0;
