@@ -1,5 +1,6 @@
  body {
     margin: 0;
+     overflow-x: hidden;
 } 
 
 @import url(../../assets/fonts/georgia/stylesheet.css);
@@ -76,13 +77,17 @@ a {
 
 .header {
     padding: 60px 40px;
+    @media screen and (max-width: 1279px) {
+        width: 92%;
+        margin: auto;
+    }
 }
 
 main {
     margin-left: 40px;
     margin-right: 40px;
     
-    /* align-items: center; */
+  /*   align-items: center; */
     column-gap: 42px;
 }
 
@@ -137,6 +142,7 @@ logo {
 .main-txt {
     margin-top: 160px;
     row-gap: 42px;
+    width: 460px;
     h1 {
         font-family: 'Georgia';
         font-style: normal;
@@ -151,6 +157,7 @@ logo {
         height: 52px;
     }
     
+
 }
 
 .main-description {
@@ -164,7 +171,7 @@ logo {
 
 .wrapper {
     @extend %main-background;
-    height: 908px;
+    /* height: 908px; */
 }
 
 .white-txt {
@@ -197,6 +204,7 @@ nav {
             color: #FAFAFA;
 
         }
+        
         
 }
 
@@ -245,24 +253,32 @@ p, h2 {
 }
 
 
-
-.main-img {
-    width: 698px;
-    height: 728px;
-    /* margin-top: 120px; */
-}
-
 .about {
     @extend %flex;
     /* @extend %space-between; */
     column-gap: 120px;
     /* height: 588px; */
     align-items: center;
-    padding: 0 215px;
+   
+    margin: 80px 215px 100px;
      h2 {
          margin: 0;
      }
-     margin: 80px 0 100px;
+    
+
+     @media screen and (max-width: 1279px) {
+          display: flex;
+          flex-direction: column-reverse;
+          width: 437px;
+          margin: 80px auto 100px;
+          row-gap: 80px;
+      }
+      
+     @media screen and (max-width: 767px) {
+        width: 270px;
+        row-gap: 42px;
+        margin: 42px auto;
+    }
 
 }
 
@@ -302,6 +318,11 @@ p, h2 {
 
  .pet-slides {
     column-gap: 90px;
+
+    @media screen and (max-width: 1279px) {
+        column-gap: 30px;
+        margin: auto;
+    }
 }
 
 .pet-slide {
@@ -383,13 +404,21 @@ p, h2 {
     column-gap: 120px;
     row-gap: 55px;
     justify-content: center;
-    
         img {
             width: 60px;
             height: 60px;
             margin-bottom: 30px;
         }
-
+        @media screen and (max-width: 1279px) {
+            width: 82%;
+            margin: auto;
+            column-gap: 60px;
+            .help-item {
+                width: 170px;
+                height: 113px;
+            }
+            
+        }
         
 }
 
@@ -410,7 +439,12 @@ p, h2 {
     background-color: $dark-blocks-bckgr;
     padding: 80px 182px 100px 183px;
     column-gap: 30px;
-    
+    @media screen and (max-width: 1279px) {
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 60px;
+        margin: auto;
+    }
 
 }
 
@@ -482,4 +516,40 @@ p, h2 {
     align-items: flex-start;
     column-gap: 160px;
     padding: 0 40px 0;
+
+    @media screen and (max-width: 1279px) {
+        flex-wrap: wrap;
+        column-gap: 80px;
+        margin: auto;
+    }
 } 
+
+
+@media screen and (max-width: 1279px) {
+    main {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-txt {
+        margin-top:0;
+        margin-bottom: 100px;
+        .btn {
+        align-self: center;
+        }
+
+    }
+
+    .third-slide {
+        display: none;
+    }
+
+  }
+  
+  @media screen and (max-width: 767px) {
+   
+    .third-slide, .second-slide, .paginator {
+        display: none;
+    }
+  }
+  

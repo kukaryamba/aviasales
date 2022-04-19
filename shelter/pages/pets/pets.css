@@ -69,6 +69,13 @@ p {
       background-color: wheat; */
 }
 
+@media screen and (max-width: 1279px) {
+  .header {
+    width: 92%;
+    margin: auto;
+  }
+}
+
 main {
   margin: 0 40px 0;
   -webkit-box-align: center;
@@ -357,5 +364,15 @@ nav a:hover {
   -webkit-column-gap: 160px;
           column-gap: 160px;
   padding: 0 40px 0;
+}
+
+@media screen and (max-width: 1279px) {
+  .footer-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-column-gap: 80px;
+            column-gap: 80px;
+    margin: auto;
+  }
 }
 /*# sourceMappingURL=pets.css.map */

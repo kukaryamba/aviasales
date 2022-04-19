@@ -73,6 +73,10 @@ body {
   
   .header {
       padding: 30px 40px 30px;
+      @media screen and (max-width: 1279px) {
+        width: 92%;
+        margin: auto;
+    }
       /* position: fixed;
       top: 0;
       width: 1200px;
@@ -336,4 +340,9 @@ nav {
     align-items: flex-start;
     column-gap: 160px;
     padding: 0 40px 0;
+    @media screen and (max-width: 1279px) {
+        flex-wrap: wrap;
+        column-gap: 80px;
+        margin: auto;
+    }
 } 
