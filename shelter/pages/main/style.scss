@@ -159,7 +159,7 @@ logo {
         font-weight: 400;
         font-size: 44px;
         line-height: 130%;
-        margin: 0;
+        /* margin: 0; */
     }
 
     .btn{
@@ -167,7 +167,13 @@ logo {
         height: 52px;
     }
     
+    @media screen and (max-width: 1279px) {
+        margin: auto;
+    }
+
     @media screen and (max-width: 767px) {
+        text-align: center;
+
         h1 {
             font-size: 25px;
         }
