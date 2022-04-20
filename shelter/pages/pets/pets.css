@@ -106,6 +106,38 @@ logo {
   letter-spacing: 0.1em;
 }
 
+.burger::before, .burger::after, .burger-line {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+.burger {
+  position: relative;
+  display: none;
+  width: 30px;
+  height: 22px;
+  margin-top: 15px;
+}
+
+.burger::before {
+  top: 0;
+  right: 0;
+}
+
+.burger::after {
+  bottom: 0;
+  right: 0;
+}
+
+.burger-line {
+  top: calc(50% - 1px);
+  right: 0;
+}
+
 .active {
   position: relative;
   color: #292929;
@@ -408,6 +440,9 @@ nav a:hover {
 }
 
 @media screen and (max-width: 767px) {
+  .burger {
+    display: inline-block;
+  }
   .second-slide, .paginator {
     display: none;
   }
