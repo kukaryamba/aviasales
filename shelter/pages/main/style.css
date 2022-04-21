@@ -161,7 +161,7 @@ logo {
 .main-txt {
   margin-top: 160px;
   row-gap: 42px;
-  /* max-width: 460px; */
+  max-width: 460px;
 }
 
 .main-txt h1 {
@@ -180,7 +180,7 @@ logo {
 
 @media screen and (max-width: 1279px) {
   .main-txt {
-    /* margin: auto; */
+    margin: auto;
   }
 }
 
@@ -682,6 +682,9 @@ p, h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;

@@ -187,7 +187,7 @@ logo {
 .main-txt {
     margin-top: 160px;
     row-gap: 42px;
-    /* max-width: 460px; */
+    max-width: 460px;
     h1 {
         font-family: 'Georgia';
         font-style: normal;
@@ -203,7 +203,7 @@ logo {
     }
     
     @media screen and (max-width: 1279px) {
-        /* margin: auto; */
+        margin: auto;
     }
 
     @media screen and (max-width: 767px) {
@@ -616,7 +616,7 @@ p, h2 {
 
 .footer-content {
     display: flex;
-    
+    justify-content: center;
     @extend %main-background;
     align-items: flex-start;
     column-gap: 160px;
