@@ -4,7 +4,8 @@
 } 
 
 
-
+/* *{border:1px solid red; box-sizing:border-box}
+ */
 
 
 @import url(../../assets/fonts/georgia/stylesheet.css);
@@ -14,7 +15,6 @@
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
-    
   }
 
 $font-georgia: Georgia, 'Times New Roman', Times, serif;
@@ -85,6 +85,7 @@ a {
 .header {
     padding: 60px 40px;
     @media screen and (max-width: 1279px) {
+        padding: 30px 30px 60px;
         /* width: 92%;
         margin: auto; */
     }
@@ -105,7 +106,7 @@ a {
     display: none;
     width: 30px;
     height: 22px;
-    margin-top: 15px;
+    margin-top: 20px;
     &::before {
         @extend %burger-line;
         top: 0;
@@ -129,12 +130,10 @@ a {
 main {
     margin-left: 40px;
     margin-right: 40px;
-    
-  /*   align-items: center; */
-    border:1px solid red; 
-    box-sizing:border-box;
-
     column-gap: 42px;
+    @media screen and (max-width: 767px) {
+        margin-left: 5px;
+    }
 }
 
 .header, nav, main, .pet-slides, .donation {
@@ -188,14 +187,14 @@ logo {
 .main-txt {
     margin-top: 160px;
     row-gap: 42px;
-    max-width: 460px;
+    /* max-width: 460px; */
     h1 {
         font-family: 'Georgia';
         font-style: normal;
         font-weight: 400;
         font-size: 44px;
         line-height: 130%;
-        /* margin: 0; */
+        margin: 0;
     }
 
     .btn{
@@ -204,7 +203,7 @@ logo {
     }
     
     @media screen and (max-width: 1279px) {
-        margin: auto;
+        /* margin: auto; */
     }
 
     @media screen and (max-width: 767px) {
@@ -217,6 +216,8 @@ logo {
         .main-description {
             font-size: 15px;
         }
+        width: 295px;
+        margin: 0;
     }
 }
 
@@ -312,6 +313,9 @@ p, h2 {
     margin: 0;
 }
 
+.get-to-know {
+    margin: 0  0 42px;
+}
 
 .about {
     @extend %flex;
@@ -320,10 +324,7 @@ p, h2 {
     /* height: 588px; */
     align-items: center;
     margin: 80px 215px 100px;
-     h2 {
-         margin: 0;
-     }
-    
+
 
      @media screen and (max-width: 1279px) {
           display: flex;
@@ -362,7 +363,6 @@ p, h2 {
 .pet-cards {
     row-gap: 60px;
     align-items: center;
-    /* height: 877px; */
     background-color: $dark-blocks-bckgr;
     padding: 20px 40px 100px;
        
@@ -401,12 +401,14 @@ p, h2 {
     }
 }
 
-.pet-name{
+.pet-name, .help-name {
     color: $title-color;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;
+    letter-spacing: 0.06em;
+
 }
 
 .paginator {
@@ -446,12 +448,15 @@ p, h2 {
 
 .help-block {
     /* width: 1200px; */
-    padding: 20px 0 100px 0;
+
+    padding: 20px 0 100px;
     align-items: center;
     row-gap: 60px;
     h2 {
         text-align: center;
     }
+
+    
     
 }
 
@@ -469,16 +474,33 @@ p, h2 {
             margin-bottom: 30px;
         }
         @media screen and (max-width: 1279px) {
-            width: 82%;
+            width: 90%;
             margin: auto;
             column-gap: 60px;
             .help-item {
                 width: 170px;
                 height: 113px;
-            }
-            
+            } 
         }
         
+        @media screen and (max-width: 767px) {
+            column-gap: 20px;
+            width: 99%;
+            justify-content: flex-start;
+            img {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 20px;
+            }
+
+            .help-name {
+                font-size: 15px;
+            }
+            .help-item {
+                width: 130px;
+                height: 87px;
+            } 
+        }
 }
 
 .help-item {
@@ -555,22 +577,30 @@ p, h2 {
 .footer-img {
     align-items: flex-end;
     margin-top: 40px;
+    @media screen and (max-width: 1279px) {
+        width: 300px;
+        height: 310px;
+    }
         @media screen and (max-width: 767px) {
-            width: 80%;
+            width: 260px;
         }
 
 
 }
 
+
 .footer-info {
     display: flex;
     flex-direction: column;
     row-gap: 40px;
-
         .block-name {
             color: white;
         }
         margin-top: 56px;
+        @media screen and (max-width: 1279px) {
+            margin-top: 30px; 
+        }
+
 }
 
 .contacts {
@@ -586,18 +616,23 @@ p, h2 {
 
 .footer-content {
     display: flex;
+    
     @extend %main-background;
     align-items: flex-start;
     column-gap: 160px;
     padding: 0 40px 0;
-
+    
     @media screen and (max-width: 1279px) {
+        
         flex-wrap: wrap;
         column-gap: 80px;
         /* margin: auto; */
     }
 } 
 
+.mobile-paginator {
+    display: none;
+} 
 
 @media screen and (max-width: 1279px) {
     main {
@@ -608,27 +643,54 @@ p, h2 {
 
     .main-txt {
         margin-top:0;
-        margin-bottom: 100px;
+        margin-bottom: 110px;
         .btn {
         align-self: center;
         }
 
     }
 
+    .main-img {
+        width: 569px;
+        margin-left: 130px;
+
+    }
+
     .third-slide {
         display: none;
     }
-
+    /* footer {
+        height: 639px;
+    } */
   }
   
   @media screen and (max-width: 767px) {
+    .header {
+        padding-left: 10px;
+    }
+
+    .main-img {
+        width: 260px;
+        margin-left: 35px;
+    }
+
+
     .burger {
         display: inline-block;
     }
 
-    .second-slide, .paginator {
+    .about-img {
+        width: 260px;
+    }
+
+    .second-slide, .desktop-paginator {
         display: none;
     }
+    
+    .mobile-paginator {
+        display: flex;
+        column-gap: 80px;
+    } 
 
     nav {
         display: none;
@@ -646,7 +708,12 @@ p, h2 {
     }
 
     .pet-cards {
-        padding: 40px 0;
+        padding: 0;
     }
-  }
-  
+
+
+    .block-name {
+        font-size: 25px;
+    }
+    
+} 

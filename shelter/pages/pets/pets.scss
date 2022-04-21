@@ -73,14 +73,15 @@ body {
   
   .header {
       padding: 30px 40px 30px;
+
       @media screen and (max-width: 1279px) {
        /*  width: 92%;
         margin: auto; */
     }
-      /* position: fixed;
-      top: 0;
-      width: 1200px;
-      background-color: wheat; */
+      /*  position: fixed; */
+      /*  top: 0; */
+      /* width: 85%; */
+      background-color: white; 
   }
   
   main {
@@ -125,7 +126,7 @@ body {
     display: none;
     width: 30px;
     height: 22px;
-    margin-top: 15px;
+    margin-top: 20px;
     &::before {
         @extend %burger-line;
         top: 0;
@@ -239,11 +240,11 @@ nav {
 
 
 .pet-cards {
-    row-gap: 60px;
+    row-gap: 40px;
     align-items: center;
     /* height: 877px; */
     background-color: $dark-blocks-bckgr;
-    padding: 60px 40px 100px;
+    padding: 180px 40px 100px;
         .btn-info {
             width: 261px;
             height: 52px;
@@ -299,15 +300,14 @@ nav {
 
 
 
-
-.pet-cards {
-    
-}
-
 .pagination {
     display: flex;
     justify-content: center;
     column-gap: 20px;
+
+    @media screen and (max-width: 767px) {
+        column-gap: 5px;
+    }
 }
 
 .paginator {
@@ -323,8 +323,8 @@ nav {
     font-weight: 400;
     font-size: 20px;
     line-height: 115%;
-     
 }
+
 .btn-num {
     background: $color-primary;
     border: none;
@@ -376,6 +376,7 @@ nav {
     display: flex;
     @extend %main-background;
     align-items: flex-start;
+    justify-content: center;
     column-gap: 160px;
     padding: 0 40px 0;
     @media screen and (max-width: 1279px) {
@@ -401,23 +402,24 @@ nav {
 
     }
 
-    .third-slide {
+    .third-slide, .last {
         display: none;
     }
 
+    .pet-cards {
+        padding-left: 94px;
+        padding-right: 94px;
+    }
   }
   
   @media screen and (max-width: 767px) {
     .burger {
         display: inline-block;
     }
-    .second-slide, .paginator {
+    .second-slide, nav, .tablet-last {
         display: none;
     }
 
-    nav {
-        display: none;
-    }
     .donation-img {
         width: 300px;
     }
@@ -431,7 +433,10 @@ nav {
     }
 
     .pet-cards {
-        padding: 40px 0;
+        padding: 40px 25px;
     }
+    
+    .block-name {
+        font-size: 25px;
   }
-  
+}
